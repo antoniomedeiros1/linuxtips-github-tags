@@ -11,5 +11,11 @@ func main() {
 	repo := "kubernetes"
 	tag := "v1.26.2"
 
-	git.BuscaGitTag(tag, repoOwner, repo)
+	b := git.BuscadorGit{
+		Repo:      repo,
+		RepoOwner: repoOwner,
+	}
+
+	b.BuscaGitTag(tag)
+
 }
